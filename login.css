@@ -2,7 +2,7 @@
     --electric-blue: #007bff;
     --dark-blue: #0a0e1c;
     --white: #ffffff;
-    --light-gray: #FAFCFF;
+    --light-gray: #f0f4f8;
     --manrope: 'Manrope', sans-serif;
     --secondary-blue: #004d99;
     --text-color: #333333; /* A dark gray for text */
@@ -10,22 +10,6 @@
     --card-background: var(--white);
     --border-color: rgba(0, 0, 0, 0.1);
     --subtitle-color: #DBEAFE;
-    --primary-color: #007bff;
-    --secondary-color: #2D3748;
-    --text-color: #4A5568;
-    --heading-color: #1A202C;
-    --bg-light: #F7FAFC;
-    --border-color: #E2E8F0;
-    --shadow-color: rgba(0, 0, 0, 0.05);
-    --green-icon: #007bff;
-    --orange-icon: #007bff;
-    --purple-icon: #007bff;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -411,430 +395,233 @@ body {
 }
 
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-h1, h2, h3, h4 {
-    color: var(--heading-color);
-    line-height: 1.2;
-    font-weight: 700;
-}
-
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
-
-p {
-    font-size: clamp(1rem, 2vw, 1.125rem);
-}
-
-section {
-    padding: 4rem 0;
-}
-
-/* Utility Classes */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.primary-btn {
-    background-color: var(--primary-color);
-    color: #fff;
-    border-color: var(--primary-color);
-}
-
-.primary-btn:hover {
-    background-color: #3373DD;
-}
-
-.secondary-btn {
-    background-color: transparent;
-    color: var(--heading-color);
-    border-color: var(--border-color);
-}
-
-.secondary-btn:hover {
-    background-color: var(--border-color);
-}
-
-.blue-text {
-    color: var(--primary-color);
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 300px;
-    background-color: #D1D5DB;
-    border-radius: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #6B7280;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-/* Section-specific Styles */
-.about-section {
-    padding-bottom: 0;
-}
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    background-color: #FAFCFF;
-}
-
-@media (min-width: 768px) {
-    .about-container {
-        flex-direction: row;
-        text-align: left;
-    }
-}
-
-.about-content {
-    flex: 1;
-    text-align: center;
-}
-
-@media (min-width: 768px) {
-    .about-content {
-        text-align: left;
-    }
-}
-
-.about-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #DBEAFE;
-    color: var(--primary-color);
-    padding: 0.3rem 1rem;
-    border-radius: 9999px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-}
-
-.about-badge i svg {
-    color: #FBBF24;
-}
-
-.about-content h1 {
-    margin-bottom: 1rem;
-}
-
-.about-content p {
-    margin-bottom: 2rem;
-}
-
-.about-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .about-actions {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-}
-
-.about-image {
-    flex: 1;
-    max-width: 500px;
-    width: 100%;
-}
-
-.about-image .image-placeholder {
-    padding-top: 60%; /* Maintain aspect ratio */
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    background-image: url(imgs/about-img-i.jpg);
-    background-size: cover;
-}
-
-
-
-.about-stats-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 2rem;
-    background-color: #fff;
-    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
-    margin-top: 4rem;
-}
-
-@media (min-width: 768px) {
-    .about-stats-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-item h3 {
-    margin: 0.5rem 0;
-}
-
-.stat-icon-wrapper {
-    background-color: #EFF6FF;
-    width: 48px;
-    height: 48px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-.stat-icon-wrapper i,
-.stat-icon-wrapper svg {
-    color: var(--primary-color);
-}
-
-.mission-section {
-    background-color: #F9FAFB;
-}
 
-.mission-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .mission-container {
-        flex-direction: row;
-    }
-}
-
-.mission-image {
-    flex: 1;
-    max-width: 500px;
-    width: 100%;
-}
-
-.mission-image .image-placeholder {
-    padding-top: 60%; /* Maintain aspect ratio */
-    position: relative;
-    background-image: url(imgs/about-img-ii.jpg);
-    background-size: cover;
-}
-
-
-
-.mission-content {
-    flex: 1;
-    text-align: left;
-}
-
-.mission-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.mission-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #DBEAFE;
-    border-radius: 50%;
-}
-
-.mission-icon  {
-    color: var(--electric-blue);
-}
-
-.mission-content ul {
-    list-style: none;
-    margin-top: 1.5rem;
-    display: grid;
-    gap: 1rem;
-}
-
-.mission-content li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-}
-
-.mission-content li i {
-    color: green;
-    flex-shrink: 0;
-    margin-top: 0.2rem;
-}
-
-.built-for-section {
-    padding: 6rem 0;
-}
-
-.built-for-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .built-for-container {
-        flex-direction: row;
-    }
-}
-
-.built-for-content {
-    flex: 1;
-}
-
-.built-for-content h2 {
-    margin-bottom: 1rem;
-}
-
-.built-for-content > p {
-    margin-bottom: 2.5rem;
-}
-
-.features-list {
-    display: grid;
-    gap: 2rem;
-}
-
-.feature-item {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
-
-.feature-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    background-color: #DBEAFE;
-    color: var(--primary-color);
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.feature-text h4 {
-    margin-bottom: 0.25rem;
-}
-
-.built-for-image {
-    flex: 1;
-    max-width: 500px;
-    width: 100%;
-}
-
-.built-for-image .image-placeholder {
-    padding-top: 60%; /* Maintain aspect ratio */
-    position: relative;
-    background-image: url(imgs/about-img-iii.jpg);
-    background-size: cover;
-}
-
 
 
-.values-section {
-    background-color: #fff;
-    padding-bottom: 6rem;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    margin-bottom: 1rem;
-}
-
-.values-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-@media (min-width: 768px) {
-    .values-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    
-}
-
-.value-card {
-    background-color: #F7FAFC;
-    padding: 2rem;
-    border-radius: 1rem;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.value-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px var(--shadow-color);
-}
 
-.value-icon {
-    width: 64px;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-}
 
-.value-icon i svg {
-color: #fff; /* Core value icons are white */
-}
 
-/* Specific icon colors from the screenshot */
-.value-card:nth-child(1) .value-icon { background-color: var(--primary-color); }
-.value-card:nth-child(2) .value-icon { background-color: var(--green-icon); }
-.value-card:nth-child(3) .value-icon { background-color: var(--orange-icon); }
-.value-card:nth-child(4) .value-icon { background-color: var(--purple-icon); }
-
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .mission-container, .built-for-container {
-        text-align: center;
-    }
-    .mission-content ul, .features-list {
-        text-align: left;
-    }
+.titanvault-login {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 48px;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
+        
+        }
+
+        .titanvault-login .logo {
+            width: 80px;
+            height: 80px;
+            background: #4285f4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+        }
+
+        .titanvault-login .logo i {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        .titanvault-login .title {
+            font-size: 32px;
+            font-weight: 600;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .titanvault-login .subtitle {
+            font-size: 16px;
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .titanvault-login .form-group {
+            margin-bottom: 24px;
+        }
+
+        .titanvault-login .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .titanvault-login .input-wrapper {
+            position: relative;
+        }
+
+        .titanvault-login .form-input {
+            width: 100%;
+            padding: 16px 16px 16px 48px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #f9fafb;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .titanvault-login .form-input:focus {
+            outline: none;
+            border-color: #4285f4;
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+        }
+
+        .titanvault-login .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            width: 20px;
+            height: 20px;
+        }
+
+        .titanvault-login .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            transition: color 0.2s;
+        }
+
+        .titanvault-login .password-toggle:hover {
+            color: #6b7280;
+        }
+
+        .titanvault-login .form-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+        }
+
+        .titanvault-login .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .titanvault-login .checkbox {
+            width: 16px;
+            height: 16px;
+            accent-color: #4285f4;
+        }
+
+        .titanvault-login .checkbox-label {
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .titanvault-login .forgot-link {
+            color: #4285f4;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .titanvault-login .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        .titanvault-login .submit-btn {
+            width: 100%;
+            background: #4285f4;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 32px;
+        }
+
+        .titanvault-login .submit-btn:hover {
+            background: #3367d6;
+        }
+
+        .titanvault-login .submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .titanvault-login .auth-link {
+            text-align: center;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 32px;
+        }
+
+        .titanvault-login .auth-link a {
+            color: #4285f4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .titanvault-login .auth-link a:hover {
+            text-decoration: underline;
+        }
+
+        .titanvault-login .security-text {
+            text-align: center;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .titanvault-login .error-message {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 24px;
+            display: none;
+        }
+
+        @media (max-width: 640px) {
+            .titanvault-login {
+                padding: 32px 24px;
+            }
+
+            .titanvault-login .title {
+                font-size: 28px;
+            }
+
+            .titanvault-login .form-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+        }
+
+
+
+button{
+    font-family: inherit;
 }
-
-
 
 
 
@@ -993,8 +780,4 @@ color: #fff; /* Core value icons are white */
     border-top: 1px solid #2d3748;
     font-size: 0.85em;
     color: #a0aec0;
-}
-
-button{
-    font-family: inherit;
 }

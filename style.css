@@ -1603,3 +1603,7 @@ body {
     font-size: 0.85em;
     color: #a0aec0;
 }
+
+button{
+    font-family: inherit;
+}
