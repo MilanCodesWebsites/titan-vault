@@ -568,14 +568,11 @@ section {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
+    background-image: url(imgs/about-img-i.jpg);
+    background-size: cover;
 }
 
-.about-image .image-placeholder img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 .about-stats-container {
     display: grid;
@@ -643,15 +640,11 @@ section {
 .mission-image .image-placeholder {
     padding-top: 60%; /* Maintain aspect ratio */
     position: relative;
+    background-image: url(imgs/about-img-ii.jpg);
+    background-size: cover;
 }
 
-.mission-image .image-placeholder img {
-    content: 'Image Placeholder';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 .mission-content {
     flex: 1;
@@ -762,14 +755,11 @@ section {
 .built-for-image .image-placeholder {
     padding-top: 60%; /* Maintain aspect ratio */
     position: relative;
+    background-image: url(imgs/about-img-iii.jpg);
+    background-size: cover;
 }
 
-.built-for-image .image-placeholder img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 .values-section {
     background-color: #fff;
