@@ -410,6 +410,21 @@ button{
     font-family: inherit;
 }
 
+.outer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.inner {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
         .titanvault-register .logo-ii {
             width: 80px;
             height: 80px;
