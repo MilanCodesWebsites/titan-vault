@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Transactions - TitanVault</title>
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="app-container">
+      <!-- Desktop Sidebar -->
+      <aside class="sidebar" id="desktop-sidebar">
+          <div class="sidebar-header">
+              <img src="imgs/titanvault.png" alt="TitanVault Logo" class="logo shield-logo">
+              <span class="app-name">TitanVault</span>
+          </div>
+          <nav class="sidebar-nav">
+              <a href="dashboard.html" class="nav-item">
+                  <i data-lucide="home"></i>
+                  <span>Home</span>
+              </a>
+              <a href="recent-transactions.html" class="nav-item active">
+                  <i data-lucide="list-checks"></i>
+                  <span>Recent Transactions</span>
+              </a>
+              <a href="deposit.html" class="nav-item">
+                  <i data-lucide="banknote-arrow-up"></i>
+                  <span>Deposit</span>
+              </a>
+              <a href="settings.html" class="nav-item">
+                  <i data-lucide="settings"></i>
+                  <span>Settings</span>
+              </a>
+              <a href="#" class="nav-item" id="logout-desktop">
+                  <i data-lucide="log-out"></i>
+                  <span>Logout</span>
+              </a>
+          </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+          <header class="page-header">
+              <a href="dashboard.html" class="back-button"><i data-lucide="arrow-left"></i></a>
+              <h1>Recent Transactions</h1>
+          </header>
+
+          <section class="form-card">
+              <div class="transactions-list" id="transactionsList">
+                  <!-- Transactions will be dynamically loaded here -->
+              </div>
+          </section>
+      </main>
+
+      <!-- Mobile Bottom Navigation -->
+      <nav class="bottom-nav" id="mobile-bottom-nav">
+          <a href="dashboard.html" class="nav-item">
+              <i data-lucide="home"></i>
+              <span>Home</span>
+          </a>
+          <a href="recent-transactions.html" class="nav-item">
+              <i data-lucide="list-checks"></i>
+              <span>Transactions</span>
+          </a>
+          <a href="deposit.html" class="nav-item">
+              <i data-lucide="banknote-arrow-up"></i>
+              <span>Deposit</span>
+          </a>
+          <a href="#" class="nav-item" id="logout-mobile">
+              <i data-lucide="log-out"></i>
+              <span>Logout</span>
+          </a>
+      </nav>
+  </div>
+  <div id="toast-container"></div>
+  <script src="script2.js"></script>
+</body>
+</html>
