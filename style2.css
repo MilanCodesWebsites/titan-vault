@@ -306,7 +306,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 5px;
-  color: var(--accent-color);
+  color: white;
 }
 
 .action-button .icon-wrapper i {
@@ -975,13 +975,13 @@ body {
   }
 
   .action-button .icon-wrapper {
-    width: 40px; /* Smaller icon wrapper */
-    height: 40px;
+    width: 32px; /* Even smaller icon wrapper */
+    height: 32px;
   }
 
   .action-button .icon-wrapper i {
-    width: 20px; /* Smaller icon */
-    height: 20px;
+    width: 16px; /* Even smaller icon */
+    height: 16px;
   }
 }
 
